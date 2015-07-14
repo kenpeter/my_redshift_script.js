@@ -61,6 +61,8 @@ isOnline(function(err, online) {
             '-t', my_temp + ":" + my_temp
           ]);          
 
+          // leave
+          process.exit();
         }); 
       }
     });
