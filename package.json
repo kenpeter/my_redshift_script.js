@@ -1,0 +1,9 @@
+{
+  "author": "kenpeter",
+  "description": "Script to use redshift in command line",
+  "name": "my_redshift_script.js",
+  "dependencies": {
+    "is-online": "^5.0.0",
+    "request": "^2.58.0"
+  }
+}
