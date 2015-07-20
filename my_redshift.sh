@@ -72,7 +72,19 @@ isOnline(function(err, online) {
   else {
     console.log('It is offline.');
 
+    // "gtk-redshift -l -37.814107:144.96328 -t 5282:5282 &"
+    var cmd = "gtk-redshift -l -37.814107:144.96328 -t 5282:5282 &";
+    console.log('Using this: ' + cmd);
+    var lat = '-37.814107';
+    var lng = '144.96328';
+    var my_temp = '5282';
+    var child = spawn('gtk-redshift', [
+      '-l', lat + ":" + lng,
+      '-t', my_temp + ":" + my_temp
+    ]);
 
+    // leave
+    process.exit();
   }
 
  
