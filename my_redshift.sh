@@ -17,9 +17,14 @@ isOnline(function(err, online) {
     var weather_url;
     var temp;
 
-    var my_extra_temp = 5000;
+    //var my_extra_temp = 5000;
+    var my_extra_temp = 4500;
     var my_temp;
     var redshift_cmd;
+
+    // API key
+    // You need to get yours somehow
+    var app_id = '542e56d5b6d3a1afe4750a04143f961a';
 
     console.log('It is online.');
 
@@ -41,7 +46,7 @@ isOnline(function(err, online) {
         console.log('lat: ' + lat + ' ' + 'lng: ' + lng);
 
         // Get weather
-        weather_url = "http://api.openweathermap.org/data/2.5/weather?q=" + address_weather
+        weather_url = "http://api.openweathermap.org/data/2.5/weather?q=" + address_weather + "&APPID=" + app_id;
         console.log('weather url: ' + weather_url);
 
         request({
